@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.jcet.springcloud.dao.DeptDao">
+
+    <!--插入-->
+    <insert id="addDept" parameterType="cn.jcet.springcloud.pojo.Dept">
+        insert into dept (dname,db_source) values (#{dname},DATABASE())
+    </insert>
+
+    <!--查询-->
+    <select id="queryById" resultType="cn.jcet.springcloud.pojo.Dept" parameterType="integer">
+        select * from dept where deptno = #{id}
+    </select>
+
+    <!--查询全部-->
+    <select id="queryAll" resultType="cn.jcet.springcloud.pojo.Dept">
+        select * from dept;
+    </select>
+</mapper>
