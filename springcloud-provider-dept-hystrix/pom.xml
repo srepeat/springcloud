@@ -12,7 +12,6 @@
     <artifactId>springcloud-provider-dept-hystrix</artifactId>
 
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

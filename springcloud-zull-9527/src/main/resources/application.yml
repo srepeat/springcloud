@@ -1,0 +1,29 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zull
+# eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+    instance:
+      instance-id: springcloud-zull-9527
+      prefer-ip-address: true
+
+info:
+  app.name: xianlei
+  app.version: 1.0
+
+#zull配置
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept #配置那一个应用
+    mydept.path: /mydept/** #虚拟访问路径
+  ignored-services: "*" # 通配拦截
+#  prefix: /zull  #访问前缀
+
+
+

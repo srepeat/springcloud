@@ -1,0 +1,8 @@
+#系统配置
+spring:
+  cloud:
+    config:
+      name: config-eureka
+      label: master
+      profile: dev
+      uri: http://localhost:3344

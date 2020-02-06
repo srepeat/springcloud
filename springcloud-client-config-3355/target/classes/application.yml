@@ -1,0 +1,4 @@
+#用户配置
+spring:
+  application:
+    name: config-client-3355
